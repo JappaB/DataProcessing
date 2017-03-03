@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- Jasper Bakker (10260250)
+
+This is a map that shows number of mobile phones per 100 people in a country
+
+Op de een of andere manier krijg ik mijn css niet meer goed waardoor de map niet meer mooi
+wordt weergeven. Ik heb helaas geen tijd meer om het te fixen, maar ben zeer benieuwd waar het
+door zou kunnen komen.
+
+-->
+
+<html>
+    <head>
+      <title>Mobile phones per 100 people</title>
+        <!-- Source of D3 and topoJson-->
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+
+        <!-- Source Datamaps-->
+        <script src="datamaps.js"></script>
+         <!-- Als ik onderstaand script gebruik dan krijg ik een reference error dat hij Datamap niet kent: http://bl.ocks.org/markmarkoh/4127667 -->
+        <!-- <script src="http://datamaps.github.com/scripts/datamaps-all.js"> </script> -->
+
+
+        <!-- Countrycodes source-->
+        <script src="countrycodes.js"></script>         
+
+        <!-- Javascript source--> 
+        <script src="map.js"></script>
+
+        <!-- CSS File -->
+        <link rel="stylesheet" type="text/css" href="map.css">
+
+    </head>
+    <body>
+
+        <h1>Homework Data Processing: Map</h1>
+
+        <p>Jasper Bakker (10260250)</p>
+
+        <p>Mobile phones per 100 users</p>
+
+        <!-- Container for the map --> 
+        <div id="container"></div>
+
+          <p class="datasource">Link to data source: <a href="http://www.gapminder.org/data/">Click</a> and ctrl+f: "mobile"<br><br>
+          Designchoices: I chose the color green since I consider it a good thing for countries to be mobile.<br> Also I chose grey to indicate no data since grey is a relatively 'empty' color. Furthermore I chose the highlights <br> of the borders of the countries to be white since this creates a <br> large contrast with the fill colors and with the normal (black) country border colors. </p>
+
+
+    </body>
+</html>
