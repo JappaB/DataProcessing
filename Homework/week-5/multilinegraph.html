@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Jasper Bakker (10260250)
+
+-->
+
+<html>
+    <head>
+      <title>Temperaturen Schiphol and de Bilt</title>
+        <!-- Source of D3 and topoJson-->
+        <script src="//d3js.org/d3.v4.min.js"></script>
+       
+		<!-- Time format source https://github.com/d3/d3-time-format-->
+        <script src="https://d3js.org/d3-time-format.v2.min.js"></script>
+
+        <!-- Javascript source--> 
+        <script src="multilinegraph.js"></script>
+
+    </head>
+    <body>
+
+        <h1>Temperaturen De Bilt en Schiphol 2015</h1>
+
+        <p>Jasper Bakker (10260250) <br>
+        Homework Data Processing: Multi-series line chart</p>
+
+        <!-- Dropdown menu-->         
+         <div>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a class="menu" value="deBilt" href="#">De Bilt</a></li>
+                    <li><a class="menu" value="schiphol" href="#">Schiphol</a></li>
+                </ul>
+    	</div>
+    	<p id="location">Selecteer het meetstation</p>
+
+        <!-- Svg element--> 
+        <svg width="960" height="500"></svg>
+
+          <p class="datasource">Link to data source: <a href="http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi">Click</a>
+		</p>
+          
+    </body>
+</html>
