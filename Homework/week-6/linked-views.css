@@ -1,0 +1,25 @@
+#container {
+	position: relative; width: 900px; height: 600px; border-spacing: 20px; overflow: visible;
+}
+
+.datasource {
+	margin-top: 5cm;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000000;
+    shape-rendering: crispEdges;
+}
+ 
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
