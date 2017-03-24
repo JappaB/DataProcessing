@@ -1,0 +1,52 @@
+
+
+/*
+Jasper Bakker (10260250)
+CSS file for linked views
+
+CSS positioning source: http://www.barelyfitz.com/screencast/html-training/css/positioning/;
+*/
+
+#container {
+  position:relative;
+  top: 50%;
+  margin-top: 50px; 
+  margin-left: 0px; 
+
+}
+
+.datamap{
+  padding:100px;
+  width:20%;
+  height:20%;
+}
+.datamap-subunits{
+  width:50%;
+  height:50%;
+
+}
+
+.datamaps-legend{
+  margin-top: 0px
+}
+
+.legend-key path {
+  display: none;
+}
+
+
+.datasource{
+  position: relative;
+  top: 600px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000000;
+    shape-rendering: crispEdges;
+}
+ 
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;

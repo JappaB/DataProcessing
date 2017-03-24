@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- Jasper Bakker (10260250)
+
+linked views
+
+-->
+
+<html>
+    <head>
+      <title>Life expectancy</title>
+
+        <!-- Source D3-->
+        <script src="http://d3js.org/d3.v3.min.js"></script>
+
+        <!-- Source topojson-->
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+
+        <!-- Source datamaps -->
+        <script src="datamap-world-min.js"></script> 
+
+        <!-- Source queue -->
+        <script src="http://d3js.org/queue.v1.min.js"></script>
+
+        <!-- Countrycodes source-->
+        <script src="countrycodes.js"></script>         
+
+        <!-- Javascript source--> 
+        <script src="linked-views.js"></script>
+
+        <!-- Latest compiled and minified CSS
+https://www.w3schools.com/bootstrap/bootstrap_get_started.asp
+         -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- <script src="assets/js/jquery-2.1.0.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-slider.js"></script> -->
+        <!-- CSS File -->
+        <link rel="stylesheet" type="text/css" href="linked-views.css">
+
+
+    </head>
+    <body>
+<!-- Trying to use the following structure: https://v4-alpha.getbootstrap.com/layout/grid/-->
+        <div id="infoText" class="col-xs-12 col-md-6">
+            <div id="header"> <h3>Data processing: linked views by Jasper Bakker (10260250)</h3>
+            </div>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" id="yearButton"type="button" data-toggle="dropdown" onchange="dropdown()">Year<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-id="1995">1995</a></li>
+                        <li><a href="#" data-id="2000">2000</a></li>
+                        <li><a href="#" data-id="2005">2005</a></li>
+                        <li><a href="#" data-id="2010">2010</a></li>
+                    </ul>
+                </div>
+
+
+            <h3> Context</h3>
+            <p>
+            Hans Rosling (Uppsala, 27 July 1948, Uppsala - 7 February 2017), a famous statistician showed in one of his amazing <a href= "https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen?language=nl">TED-talks </a> that people are pretty pessimistic about the world, while this doesn’t have to be. The average world wide life expectancy in 2006, when he made the video, was for instance not 50, not 60, but 70 years old. Many people guessed this wrong when asked. Hans Rosling is also the founder of the Gapminder foundation, which aims to use statistics to better inform the world. The data used for this assignment is also from the database of the Gapminder foundation. With this webpage I try to give a little more context to his data.
+            </p>
+
+            <h3>Content and usage</h3>
+            <h4> World map</h4>
+            <p> The world map gives an overview of the life expectancy around the world. Hovering over a country shows some additional data. By selecting a different year, both visualizations will update. I chose for categorizing the life expectancy instead of using a continuum because this enhances the contrast between countries. The contrasts helps to quickly see the difference between countries and regions. The colour green has been used as it symbolizes something positive, just as longer lives do. </p>
+            
+            <h4> Scatter plot</h4>
+            <p> The scatterplot shows the relation between life expectancy and the percentage of GDP that is spend on health care. When clicking on one of the data points, the corresponding country colours orange in the data map. This colour has been chosen because it stands out compared to the different shades of green and the white default colour. The scatterplot consists only of data points where there is data on both the health expenditure and the life expectancy for a given year. By selecting a different year, both visualizations will update. For both years, at first glance, there doesn't seem to be a strong relation between the two variables.</p>
+            <br>
+            <h4><span>Data source:</span>
+            <a href="http://www.gapminder.org/data/">Gapminder database</a></h4>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="container" id="map" style="position: relative; width: 800px; height: 700px; "></div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="container" id="scatterplot"></div>
+        </div>
+
+
+
+
+    </body>
+</html>
